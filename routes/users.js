@@ -11,6 +11,7 @@ router.put("/:id", async (req, res) => {
       req.body.password = await bcrypt.hash(req.body.password, salt);
     }
     try {
+      
       const updatedUser = await User.findByIdAndUpdate(
         req.params.id,
         {
@@ -18,6 +19,7 @@ router.put("/:id", async (req, res) => {
         },
         { new: true }
       );
+      // console.log(1)
       res.status(200).json(updatedUser);
     } catch (err) {
       res.status(500).json(err);
