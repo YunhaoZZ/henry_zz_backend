@@ -11,8 +11,8 @@ const path = require("path");
 const cors = require('cors');
 
 const corsOptions ={
-    // origin:'http://localhost:3000', 
-    origin:'https://yunhaozz.github.io', 
+    origin:'http://localhost:3000', 
+    // origin:'https://henryzz.com', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
@@ -54,7 +54,7 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
-app.listen("5000", () => {
+app.listen("5000",  () => {
   console.log("Backend is running");
 })
 
