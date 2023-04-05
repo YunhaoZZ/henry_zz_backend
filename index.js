@@ -11,8 +11,8 @@ const path = require("path");
 const cors = require('cors');
 
 const corsOptions ={
-    // origin:'http://localhost:3000', 
-    origin:'https://yunhaozz.github.io', 
+    origin:'https://localhost:3000', 
+    // origin:'https://yunhaozz.github.io', 
     credentials:true,            //access-control-allow-credentials:true
     optionSuccessStatus:200
 }
@@ -47,12 +47,15 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
   res.status(200).json("File has been uploaded");
 });
 
+
+
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
-app.listen(5000, '0.0.0.0', () => {
+app.listen("5000", () => {
   console.log("Backend is running");
 })
+
 
