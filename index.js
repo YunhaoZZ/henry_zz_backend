@@ -54,7 +54,7 @@ app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", categoryRoute);
 
-app.listen("5000", () => {
+app.listen("443", () => {
   console.log("Backend is running");
 })
 
